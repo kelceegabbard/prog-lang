@@ -15,8 +15,10 @@ int nextToken;
 FILE *in_fp, *fopen();
 
 /* function declarations */
-void addChar();
+
 void getChar();
+void addChar();
+int lookup(char);
 void getNonBlank();
 int lex();
 
@@ -46,7 +48,7 @@ main() {
         getChar();
         do {
             lex(); 
-        } while (nextToken! = EOF);
+        } while (nextToken != EOF);
     }
 }
 
@@ -66,7 +68,7 @@ int lookup(char ch) {
             nextToken = ADD_OP;
             break;
         case '-':
-            adChar();
+            addChar();
             nextToken = SUB_OP;
             break;
         case '*':
@@ -98,7 +100,7 @@ void addChar() {
 
 /* getChar - a function to get the next character of input and determine its character class */
 void getChar() {
-    if ((nextChar = getc(in_fp)) = EOF) {
+    if ((nextChar == getc(in_fp)) == EOF) {
         if (isalpha(nextChar)) 
             charClass = LETTER;
         else if (isdigit(nextChar))
@@ -114,7 +116,7 @@ void getNonBlank() {
     while (isspace(nextChar))
         getChar();
 }
-/ 
+
 
 /* lex - a simple lexical analyzer for arithmetic expressions */
 int lex() {
