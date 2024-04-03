@@ -1,0 +1,25 @@
+[expr
+    [term
+        [factor
+            [LEFT_PAREN]
+            [expr
+                [term
+                    [factor
+                        [id [A]]
+                    ]
+                ]
+                [+]
+                [term
+                    [factor
+                        [id [47]]
+                    ]
+                ]
+            ]
+            [RIGHT_PAREN]
+        ]
+        [/]
+        [factor
+            [id [B]]
+        ]
+    ]
+]
