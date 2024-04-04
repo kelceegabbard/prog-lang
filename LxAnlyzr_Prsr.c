@@ -25,8 +25,6 @@ This is a simple lexical analyzer and parser for arithmetic expressions. Input i
         Constants: 
             'LETTER', 'DIGIT', 'UNKNOWN': Constants for character classes.
             'INT_LIT', 'IDENT', 'ASSIGN_OP', 'ADD_OP', 'SUB_OP', 'MULT_OP', 'DIV_OP', 'LEFT_PAREN', 'RIGHT_PAREN': Constants for token types.
-        
-
 */
 
 #include <stdio.h> 
