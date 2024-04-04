@@ -1,4 +1,10 @@
-/* front.c - a lexical analyzer system for simple arithmetic expressions*/
+/*
+This is a simple lexical analyzer and parser for arithmetic expressions. Input is taken from 'input.in' and outputs to 'output.txt'.
+
+
+
+front.c - a lexical analyzer system for simple arithmetic expressions
+*/
 
 #include <stdio.h> 
 #include <ctype.h>
