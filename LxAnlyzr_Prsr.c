@@ -1,24 +1,32 @@
 /*
 This is a simple lexical analyzer and parser for arithmetic expressions. Input is taken from 'input.in' and outputs to 'output.txt'.
 
+1. Syntax grammar: This program uses a simple BNF grammar to parse arithmetic expressions.
+    The grammar follows BNF principles and eahc token in the expression is recognized according to these rules. 
+    The operators, identifiers, integer literals, and parentheses all follow the BNF grammar principles. 
+    
+2. This program follows a POP (Procedure-Oriented Programming) approach. 
+    Each function handles a different part of the parsing process, meaning the program consists of procedures for each process. 
+    C language is also a representative of POP. 
+    Our procedures include getChar(), addChar(), lookup(), getNonBlank(), lex(), expr(), term(), and factor(). 
 
+3. Our variables and functions follow standard naming conventions.
+    Varaible and functions are all in lower camel case.
+    Constants are defined using ALL_CAPS. 
 
-front.c - a lexical analyzer system for simple arithmetic expressions
 */
 
 #include <stdio.h> 
 #include <ctype.h>
 
 /* Global declarations */
-/* Varaibles */
-
-int charClass; 
-char lexeme[100]; 
-char nextChar; 
-int lexLen;
-int token; 
-int nextToken; 
-FILE *in_fp, *fopen(), *out_fp;
+int charClass; /* Class of the current character */
+char lexeme[100]; /* Current lexeme being analyzed */ 
+char nextChar; /* Next character to input */
+int lexLen; /* Length of lexeme[] */
+int token; /* Current token */
+int nextToken; /* next token  */
+FILE *in_fp, *fopen(), *out_fp; /* input and output files */
 
 /* function declarations */
 
