@@ -1,25 +1,55 @@
 [expr
     [term
         [factor
+            [id [A]]
+        ]
+    ]
+    [+]
+    [term
+        [factor
+            [id [B]]
+        ]
+    ]
+]
+[expr
+    [term
+        [factor
+Error - invalid factor
+        ]
+    ]
+    [+]
+    [term
+        [factor
+            [id [B]]
+        ]
+        [*]
+        [factor
+            [id [100]]
+        ]
+    ]
+]
+[expr
+    [term
+        [factor
+Error - invalid factor
+        ]
+        [*]
+        [factor
             [LEFT_PAREN]
             [expr
                 [term
                     [factor
-                        [id [A]]
+                        [id [B]]
                     ]
                 ]
                 [+]
                 [term
                     [factor
-                        [id [47]]
+                        [id [100]]
                     ]
                 ]
             ]
             [RIGHT_PAREN]
-        ]
-        [/]
-        [factor
-            [id [B]]
         ]
     ]
 ]
